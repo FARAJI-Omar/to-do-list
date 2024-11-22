@@ -1,6 +1,6 @@
 body{
-    /* background-color: #4c1067; */
-    background: linear-gradient(to bottom right, #4f0745 50%, #983dc3 , aqua);
+    background-color: #4c1067;
+    /* background: linear-gradient(to bottom right, #4f0745 50%, #983dc3 , aqua); */
     height: 100vh; 
     width: 100vh;
     padding: 5% 0% 0% 0%;
@@ -23,6 +23,7 @@ body{
 }
 h1{
     font-family: Tahoma, sans-serif;
+    text-shadow: aqua 1px 2px;
 }
 .to-do-container {
     justify-content: center;
@@ -43,8 +44,6 @@ ul li{
     user-select: none;
     position: relative;
 }
-
-
 
 ul li button{
     position: absolute;
