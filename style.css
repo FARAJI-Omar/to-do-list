@@ -1,11 +1,14 @@
 body{
-    background-color: #4c1067;
-    width: 25%;
+    /* background-color: #4c1067; */
+    background: linear-gradient(to bottom right, #4f0745 50%, #983dc3 , aqua);
+    height: 100vh; 
+    width: 100vh;
     padding: 5% 0% 0% 0%;
     align-items: center;
     justify-content: center;
     justify-items: center;
     margin: auto;
+    overflow: hidden;
 }
 
 .main-container{
@@ -15,14 +18,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 80%;
     height: 70vh;
 }
 h1{
     font-family: Tahoma, sans-serif;
 }
 .to-do-container {
-    justify-content: center; 
+    justify-content: center;
     margin-top: 5%;
     border: #6a238b solid;
     border-radius: 5px;
@@ -33,7 +36,8 @@ h1{
 
 ul li{
     list-style: none;
-    font-size: 16px;
+    font-size: 25px;
+    text-align: left;
     padding: 12px 8px 12px 20px;
     cursor: pointer;
     user-select: none;
@@ -54,14 +58,7 @@ ul li button{
     background-color: aqua;
 }
 
-ul li button:hover {
-    background-color: #031a2a; /* Darker blue */
-    transform: scale(1.1); /* Slightly enlarge the button */
-  }
-
 .input-field{
-    width: 150%;
-    margin-left: -25%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -81,25 +78,21 @@ ul li button:hover {
 }
 
 #add{
-    border: none;
+    border: #6a238b solid 2px;
     outline: none;
     padding: 16px 30px;
-    background: #691f8a;
-    color: #fff;
-    font-size: 15px;
+    background: aqua;
+    color: #6a238b;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
     border-radius: 40px;
 }
 
-@media (max-width: 600px) {
-    body {
-        width: 80%;
-        padding: 2%;
-    }
-    
+@media (max-width: 600px) {    
     .main-container {
         padding: 5%; 
-        margin-top: 30%;
+        margin-top: 20%;
     } 
     
     h1 {
@@ -108,8 +101,8 @@ ul li button:hover {
     }
 
     .input-field{
-        width: 85%;
-        margin-left: 3%;
+        width: 70vh;
+        margin-left:3%;
     }
     
     #add{
@@ -118,7 +111,8 @@ ul li button:hover {
 
     .to-do-container{
         justify-content: center; 
-        width: 85%;
+        width: 80vh;
+        height: 40vh;
         margin-top: 5%;
         font-size: 20px; 
         line-height: 2;
@@ -126,9 +120,6 @@ ul li button:hover {
 }
 
 @media (min-width: 600px) and (max-width: 900px) {
-    body {
-        width: 80%;
-    }
 
     .main-container {
         padding: 5%; 
@@ -141,45 +132,43 @@ ul li button:hover {
     }
 
     .input-field{
-        width: 140%;
-        margin-left: -23%;
+        width: 60vh;
+        margin-left: 1%;
     }
 
     .to-do-container{
         justify-content: center; 
-        width: 140%;
+        width: 60vh;
+        height: 40vh;
         margin-top: 10%;
-        margin-left: -25%;
         font-size: 25px; 
         line-height: 2;
     }
 }
 
 @media (min-width: 900px) {
-    body {
-        width: 60%;
-    }
+
     
     h1 {
         font-size: 45px;
-        margin-bottom: 10%;
+        margin-top: -2%;
     }
     
     .main-container {
-        padding: 5%; 
+        padding: 5%;
     } 
 
     .input-field{
-        margin-left: -28%;
+        width: 70vh; 
+        margin-left: 1%;   
     }
 
     .to-do-container{
-        width: 150%;
+        width: 70vh;
+        height: 40vh;
         margin-top: 10%;
         padding-top: 5%;
         padding-bottom: 5%;
-        margin-left: -30%;
-        font-size: 20px; 
         line-height: 1.7;
     }
 
