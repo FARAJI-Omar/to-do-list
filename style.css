@@ -1,14 +1,7 @@
 body{
     background-color: #4c1067;
-    /* background: linear-gradient(to bottom right, #4f0745 50%, #983dc3 , aqua); */
-    height: 100vh; 
-    width: 100vh;
-    padding: 5% 0% 0% 0%;
-    align-items: center;
-    justify-content: center;
+    padding: 2% 2% 0% 0%;
     justify-items: center;
-    margin: auto;
-    overflow: hidden;
 }
 
 .main-container{
@@ -18,157 +11,382 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    height: 70vh;
+    width: 95%;
 }
 h1{
     font-family: Tahoma, sans-serif;
     text-shadow: aqua 1px 2px;
 }
-.to-do-container {
-    justify-content: center;
+#addTask{
+    color: white;
+    background-color: #4c1067;
+    border-radius: 6px;
+    width: 140px;
+    height: 50px;
+    margin-top: 50%;
+    font-size: 120%;
+}
+.status-containers{
+    border-top: #4c1067 solid;
     margin-top: 5%;
-    border: #6a238b solid;
-    border-radius: 5px;
-    height: 230px;
-    overflow-y: scroll;
-    overflow-x: scroll;
-}
-
-ul li{
-    list-style: none;
-    font-size: 25px;
-    text-align: left;
-    padding: 12px 8px 12px 20px;
-    cursor: pointer;
-    user-select: none;
-    position: relative;
-}
-
-ul li button{
-    position: absolute;
-    right: 10%;
-    top: 5px;
-    width: 50px;
-    height: 30px;
-    font-size: 20px;
-    color: #4c1067;
-    border-radius: 80px;
-    background-color: aqua;
-}
-
-.input-field{
+    width: 95%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #edeef0;
-    border-radius: 30px;
-    padding-left: 20px;
-    margin-bottom: 25px;
-    border: rgb(109, 26, 110) solid 2px;
+    justify-content: space-around;
+    padding: 5%;
 }
 
-#inputBox {
-    flex: 1;
-    border: none;
-    outline: none;
-    background: transparent;
-    padding: 10px;
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin-right: 5%;   
 }
 
-#add{
-    border: #6a238b solid 2px;
-    outline: none;
-    padding: 16px 30px;
-    background: aqua;
-    color: #6a238b;
-    font-size: 16px;
+.title1{
+    display: flex;
+    font-size: 100%;
     font-weight: 600;
-    cursor: pointer;
-    border-radius: 40px;
+    border-bottom: #4c1067 solid;
+}
+.title2{
+    display: flex;
+    font-size: 100%;
+    font-weight: 600;
+    border-bottom: yellow solid;
+}
+.title3{
+    display: flex;
+    font-size: 100%;
+    font-weight: 600;
+    border-bottom: green solid;
 }
 
-@media (max-width: 600px) {    
-    .main-container {
-        padding: 5%; 
-        margin-top: 20%;
-    } 
-    
-    h1 {
-        font-size: 25px;
-        margin-bottom: 15%;
+.title1 p, .title2 p, .title3 p{
+    font-size: 110%;
+    margin-left: 10%;
+    margin-top: 12%;
+}
+.container li{
+    border: #4c1067 solid;
+    border-left: solid 5px #4c1067;
+    border-radius: 5px;
+    width: 110%;
+    padding: 5%;
+    text-align: left;
+    font-size: 120%;
+    font-weight: 500;
+    list-style: none;
+    margin-left: -30%;
+    margin-bottom: 5%;
+}
+
+.add-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input{
+    border: #4c1067 solid 2px;
+    background-color: #f3ebf7;
+    border-radius: 5px;
+    margin-top: 5%;
+    margin-left: -50%;
+    width: 200%;
+    height: 30px;
+}
+#addButton{
+    border: #4c1067 solid 2px;
+    background-color: #cbaed7;
+    border-radius: 5px;
+    margin-left: -50%;
+}
+
+.hidden {
+    display: none;
+}
+
+.popUpBox {
+    width: 240%;
+    margin-top: 10%;
+    display: block;
+    border: #906e9f solid;
+    border-radius: 5px;
+}
+
+
+.container li button{
+    border: #4c1067 solid 2px;
+    background-color: #cbaed7;
+    border-radius: 5px;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    width: 90px;
+    height: 25px;
+    align-items: center;
+
+}
+
+#inprogress-container li{
+    border: yellow solid;
+    border-left: solid 5px yellow;
+}
+#inprogress-container li button{
+    border: rgb(136, 136, 11) solid 2px;
+    background-color: rgb(232, 232, 124);
+}
+#Done-container li{
+    border: green solid;
+    border-left: solid 5px green;
+}
+#Done-container li button{
+    border: green solid 2px;
+    background-color: rgb(100, 208, 100);
+}
+
+
+/* Grand Écran d'Ordinateur: À partir de 1280px */
+@media (min-width: 1280px) {
+
+    h1{
+        font-size: 300%;
+    }
+    #addTask{
+        width: 170px;
+        font-size: 150%;
     }
 
-    .input-field{
-        width: 70vh;
-        margin-left:3%;
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        margin-right: 5%;   
     }
     
-    #add{
+    .title1{
+        font-size: 120%;
+    }
+    .title2{
+        font-size: 120%;
+    }
+    .title3{
+        font-size: 120%;
+    }
+    
+    .title1 p, .title2 p, .title3 p{
+        font-size: 120%;
+        margin-left: 10%;
+        margin-top: 6%;
+    }
+    .container li{
+        width: 100%;
+        font-size: 140%;
+        font-weight: 500;
+        margin-left: -12%;
+    }
+    
+
+    
+    .input{
+        margin-left: -100%;
+        width: 300%;
+        height: 40px;
+    }
+    #addButton{
+        margin-left: -100%;
+        width: 100px;
+        height: 40px;
+        font-size: 160%;
+    }
+    
+    .container li button{
+        width: 90px;
+        height: 25px;
+        align-items: center;
+    }
+    
+}
+
+/* Petit Écran d'Ordinateur: De 1024px à 1280px */
+@media (min-width: 1024px) and (max-width: 1280px) {
+    h1{
+        font-size: 300%;
+    }
+    #addTask{
+        width: 170px;
+        font-size: 150%;
+    }
+
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        margin-right: 5%;   
+    }
+    
+    .title1{
+        font-size: 120%;
+    }
+    .title2{
+        font-size: 120%;
+    }
+    .title3{
+        font-size: 120%;
+    }
+    
+    .title1 p, .title2 p, .title3 p{
+        font-size: 120%;
+        margin-left: 10%;
+        margin-top: 8%;
+    }
+    .container li{
+        width: 100%;
+        font-size: 140%;
+        font-weight: 500;
         margin-left: -15%;
     }
-
-    .to-do-container{
-        justify-content: center; 
-        width: 80vh;
-        height: 40vh;
-        margin-top: 5%;
-        font-size: 20px; 
-        line-height: 2;
+  
+    .input{
+        margin-left: -100%;
+        width: 300%;
+        height: 40px;
+    }
+    #addButton{
+        margin-left: -100%;
+        width: 100px;
+        height: 40px;
+        font-size: 160%;
+    }
+    
+    .container li button{
+        width: 85px;
+        height: 25px;
+        align-items: center;
     }
 }
 
-@media (min-width: 600px) and (max-width: 900px) {
-
-    .main-container {
-        padding: 5%; 
-        margin-top: 25%;
-    } 
+/* Tablette: De 768px à 1023px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    h1{
+        font-size: 300%;
+    }
+    #addTask{
+        width: 170px;
+        font-size: 150%;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        margin-right: 5%;   
+    }
     
-    h1 {
-        font-size: 30px;
-        margin-bottom: 10%;
+    .title1{
+        font-size: 120%;
     }
-
-    .input-field{
-        width: 60vh;
-        margin-left: 1%;
+    .title2{
+        font-size: 120%;
     }
-
-    .to-do-container{
-        justify-content: center; 
-        width: 60vh;
-        height: 40vh;
-        margin-top: 10%;
-        font-size: 25px; 
-        line-height: 2;
+    .title3{
+        font-size: 120%;
+    }
+    
+    .title1 p, .title2 p, .title3 p{
+        font-size: 120%;
+        margin-left: 10%;
+        margin-top: 12%;
+    }
+    .container li{
+        width: 100%;
+        font-size: 130%;
+        font-weight: 500;
+        margin-left: -25%;
+    }
+  
+    .input{
+        margin-left: -50%;
+        width: 200%;
+        height: 40px;
+    }
+    #addButton{
+        margin-left: -50%;
+        width: 100px;
+        height: 40px;
+        font-size: 160%;
+    }
+    
+    .container li button{
+        width: 85px;
+        height: 25px;
+        align-items: center;
     }
 }
 
-@media (min-width: 900px) {
+/* Mobile: Jusqu'à 767px */
+@media (max-width: 767px) {
+    h1{
+        font-size: 250%;
+    }
+    #addTask{
+        width: 170px;
+        font-size: 150%;
+    }
 
     
-    h1 {
-        font-size: 45px;
-        margin-top: -2%;
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin-right: 5%;   
     }
     
-    .main-container {
-        padding: 5%;
-    } 
-
-    .input-field{
-        width: 70vh; 
-        margin-left: 1%;   
+    .title1{
+        font-size: 120%;
+    }
+    .title2{
+        font-size: 120%;
+    }
+    .title3{
+        font-size: 120%;
+    }
+    
+    .title1 p, .title2 p, .title3 p{
+        font-size: 120%;
+        margin-left: 10%;
+        margin-top: 6%;
+    }
+    .container li{
+        width: 100%;
+        font-size: 140%;
+        font-weight: 500;
+        margin-left: -12%;
+    }
+   
+    .input{
+        margin-left: -50%;
+        width: 200%;
+        height: 40px;
+    }
+    #addButton{
+        margin-left: -50%;
+        width: 100px;
+        height: 40px;
+        font-size: 160%;
+    }
+    
+    .container li button{
+        width: 90px;
+        height: 25px;
+        align-items: center;
     }
 
-    .to-do-container{
-        width: 70vh;
-        height: 40vh;
-        margin-top: 10%;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        line-height: 1.7;
+    .status-containers{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-
 }

@@ -9,20 +9,38 @@
 </head>
 <body>
     <div class="main-container">
-        <h1 id="h1">To-Do List 📋</h1>
-        <div>
-            <div class="input-field">
-                <input id="inputBox" type="text" maxlength="50">
-                <button id="add">add</button>
+        <h1 id="h1">To-Do 📋</h1>
+        <div class="add-container">
+            <button id="addTask">Add Task +</button>
+            <div id="popup" class="hidden">
+                <input type="text" id="inputBox" class="input" maxlength="50">               
+                <button id="addButton">add +</button>
             </div>
-            <ul id="toDoContainer" class="to-do-container">
-                <!-- notes will be displayed here in a new <li> -->
-            </ul>
-            <ul id="done-notes">
-                <!-- done notes here -->
-            </ul>
+        </div>
+        <div class="status-containers">
+            <div class="container" id="todo">
+                <div class="title1">
+                    <h3>To Do: </h3>
+                    <p id="todo-stats"></p>
+                </div>
+                <ul id="todo-container"></ul>
+            </div>
+            <div class="container" id="doing">
+                <div  class="title2">
+                    <h3>In Progress: </h3>
+                    <p id="doing-stats"></p>
+                </div>
+                <ul id="inprogress-container"></ul>
+            </div>
+            <div class="container" id="done">
+                <div  class="title3">
+                    <h3>Done: </h3>
+                    <p id="done-stats"></p>
+                </div> 
+                <ul id="Done-container"></ul>           
+            </div>
         </div>
     </div>
-    <script src="main.js"></script>
+    <script src="main0.js"></script>
 </body>
 </html>
